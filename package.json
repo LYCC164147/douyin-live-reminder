@@ -1,0 +1,13 @@
+{
+  "name": "douyin-live-reminder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

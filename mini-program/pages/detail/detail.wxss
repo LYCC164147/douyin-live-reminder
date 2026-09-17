@@ -1,0 +1,13 @@
+.profile { display:flex; align-items:center; }
+.avatar { width:120rpx; height:120rpx; border-radius:50%; margin-right:24rpx; background:#eee; }
+.info { flex:1; }
+.name { font-size:36rpx; font-weight:bold; }
+.douyin-id { font-size:24rpx; color:#999; margin-top:4rpx; }
+.status { font-size:26rpx; padding:8rpx 20rpx; border-radius:20rpx; }
+.status.live { background:#FE2C55; color:#fff; }
+.status.offline { background:#f0f0f0; color:#999; }
+.section-title { font-size:30rpx; font-weight:600; margin-bottom:16rpx; }
+.info-row { display:flex; justify-content:space-between; padding:12rpx 0; border-bottom:1rpx solid #f0f0f0; }
+.info-label { color:#666; font-size:28rpx; }
+.info-value { font-size:28rpx; }
+.actions { margin-top:40rpx; }

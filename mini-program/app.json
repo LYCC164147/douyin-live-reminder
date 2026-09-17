@@ -1,0 +1,1 @@
+{ "pages": ["pages/index/index","pages/add/add","pages/detail/detail"], "window": { "navigationBarTitleText": "开播提醒", "navigationBarBackgroundColor": "#FE2C55", "navigationBarTextStyle": "white", "backgroundColor": "#f5f5f5" }, "style": "v2", "sitemapLocation": "sitemap.json" }

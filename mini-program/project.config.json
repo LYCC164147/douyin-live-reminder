@@ -1,0 +1,5 @@
+{
+  "description": "抖音开播提醒小程序",
+  "setting": { "es6": true, "postcss": true, "minified": true, "enhance": true, "minifyWXSS": true, "minifyWXML": true },
+  "compileType": "miniprogram", "libVersion": "3.3.4", "appid": "YOUR_APPID", "projectname": "douyin-live-reminder"
+}

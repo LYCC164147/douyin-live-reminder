@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="header"><text class="title">我的关注</text><view class="add-btn" bindtap="goAdd">+ 添加主播</view></view>
+  <view class="empty" wx:if="{{list.length === 0 && !loading}}"><text class="empty-icon">📺</text><text class="empty-text">还没有关注任何主播</text><view class="btn-primary" style="margin-top:40rpx;" bindtap="goAdd">去添加</view></view>
+  <view class="streamer-list" wx:if="{{list.length > 0}}">
+    <view class="streamer-card" wx:for="{{list}}" wx:key="secUid" bindtap="goDetail" data-sec-uid="{{item.secUid}}">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view class="info"><view class="name">{{item.nickname || '未知主播'}}</view><view class="douyin-id" wx:if="{{item.douyinId}}">抖音号: {{item.douyinId}}</view></view>
+      <view class="status {{item.isLive ? 'live' : 'offline'}}">{{item.isLive ? '直播中' : '未开播'}}</view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{loading}}"><text>加载中...</text></view>
+</view>

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="search-bar"><input class="search-input" placeholder="输入抖音号或主播昵称" bindinput="onInput" value="{{keyword}}" /><view class="btn-primary search-btn" bindtap="doSearch">搜索</view></view>
+  <view class="results" wx:if="{{results.length > 0}}">
+    <view class="result-card" wx:for="{{results}}" wx:key="secUid">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view class="info"><view class="name">{{item.nickname}}</view><view class="desc">抖音号: {{item.douyinId || '未知'}}</view></view>
+      <view class="add-btn-wrap"><view class="btn-primary add-btn" bindtap="subscribe" data-index="{{index}}">{{item.subscribed ? '已关注' : '关注'}}</view></view>
+    </view>
+  </view>
+  <view class="empty" wx:if="{{searched && results.length === 0 && !searching}}"><text class="empty-text">未找到相关主播</text></view>
+  <view class="loading" wx:if="{{searching}}"><text>搜索中...</text></view>
+  <view class="manual-add card">
+    <view class="section-title">手动添加</view>
+    <view class="form-item"><text class="label">直播间号</text><input class="input" placeholder="输入直播间ID" bindinput="onRoomIdInput" value="{{roomId}}" /></view>
+    <view class="form-item"><text class="label">主播昵称</text><input class="input" placeholder="输入主播昵称（选填）" bindinput="onNickInput" value="{{nickName}}" /></view>
+    <view class="btn-primary" style="margin-top:20rpx;" bindtap="manualAdd">添加关注</view>
+  </view>
+</view>

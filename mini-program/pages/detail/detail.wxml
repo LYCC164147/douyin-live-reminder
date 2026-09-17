@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="profile card">
+    <image class="avatar" src="{{streamer.avatar}}" mode="aspectFill" />
+    <view class="info"><view class="name">{{streamer.nickname || '未知主播'}}</view><view class="douyin-id" wx:if="{{streamer.douyinId}}">抖音号: {{streamer.douyinId}}</view></view>
+    <view class="status {{isLive ? 'live' : 'offline'}}">{{isLive ? '🔴 直播中' : '⚫ 未开播'}}</view>
+  </view>
+  <view class="card" wx:if="{{isLive}}">
+    <view class="section-title">直播信息</view>
+    <view class="info-row"><text class="info-label">标题</text><text class="info-value">{{liveTitle || '暂无'}}</text></view>
+    <view class="info-row"><text class="info-label">观看人数</text><text class="info-value">{{viewerCount || 0}}</text></view>
+  </view>
+  <view class="actions">
+    <button class="btn-primary" open-type="share">分享给朋友</button>
+    <button class="btn-secondary" style="margin-top:20rpx;" bindtap="removeSub">取消关注</button>
+  </view>
+</view>
